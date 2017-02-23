@@ -77,6 +77,6 @@ app.get('/api/jokes/celebrity', authCheck, (req, res) => {
   
   res.json(CelebrityJokes);
 })
-
-app.listen();
-console.log('Listening on localhost');
+var port = process.env.PORT || 8080;
+app.listen(port);
+console.log('Listening on localhost:' + port);
